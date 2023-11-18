@@ -7,7 +7,7 @@ import RatingBar from "../../common/ratingBar/RatingBar";
 import styles from "./ratemodal.style";
 import { icons } from "../../../constants";
 
-const RateModal = ({ open, setOpen }) => {
+const RateModal = ({ rating, setRating, open, setOpen, handleConfirm, submitting }) => {
     return(
         <Modal 
             animationType="slide"
@@ -24,19 +24,28 @@ const RateModal = ({ open, setOpen }) => {
                 </View>
                 <Text style={ styles.title }>Calificar</Text>
                 <View style={{ width: "60%" }}>
-                    <RatingBar />
+                    <RatingBar 
+                        rate={ rating }
+                        setRate={ setRating }
+                    />
                 </View>
                 <View style={ styles.textInput } >
                     <Text>Titulo</Text>
-                    <TextInput />
+                    <TextInput 
+                        value={ rating.title }
+                        onChangeText={ (text) => setRating({ ...rating, title: text }) }
+                    />
                 </View>
                 <View style={ styles.textInput } >
                     <Text>Comentario</Text>
-                    <TextInput />
+                    <TextInput 
+                        value={ rating.comment }
+                        onChangeText={ (text) => setRating({ ...rating, comment: text }) }
+                    />
                 </View>
                 <View style={{ width: "100%", flexDirection: "row", justifyContent: "center", marginTop: 20 }}>
                     <View style={{ width: "50%" }}>
-                        <PrimaryBtn btnLabel="Confirmar"  handlePress={ setOpen } />
+                        <PrimaryBtn btnLabel={ submitting ? 'Creando...' : 'Crear' }  handlePress={ handleConfirm } />
                     </View>
                 </View>
             </View>  

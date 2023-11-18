@@ -8,6 +8,7 @@ import SearchCard from "./common/cards/searchCard/SearchCard";
 import ProfileImage from "./common/profileImage/ProfileImage";
 import ShowCard from "./common/cards/showCard/ShowCard";
 import RatingCard from "./common/cards/ratingCard/RatingCard";
+import ConfirmModal from "./common/confirmModal/ConfirmModal";
 
 // Home Components
 import HorizontalList from "./home/horizontalList/HorizontalList";
@@ -44,5 +45,6 @@ export {
     ShowCard,
     RatingCard,
     Select,
-    RateModal
+    RateModal,
+    ConfirmModal
 }

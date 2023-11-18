@@ -4,8 +4,8 @@ import { View, TouchableOpacity, Image } from "react-native";
 import styles from "./ratingbar.style";
 import { icons } from "../../../constants";
 
-const RatingBar = () => {
-    const [ defaultRating, setDefaultRating ] = useState(2);
+const RatingBar = ({ rate, setRate }) => {
+    // const [ defaultRating, setDefaultRating ] = useState(2);
     const [ maxRating, setMaxRating ] = useState([1,2,3,4,5]);
 
     return(
@@ -14,11 +14,11 @@ const RatingBar = () => {
                 maxRating.map((item, key) => (
                     <TouchableOpacity
                         key={ item }
-                        onPress={ () => setDefaultRating(item) } 
+                        onPress={ () => setRate({ ...rate, rating: item }) } 
                     >
                         <Image 
                             source={
-                                item <= defaultRating ? 
+                                item <= rate.rating ? 
                                 icons.blackStar :
                                 icons.star
                             }
