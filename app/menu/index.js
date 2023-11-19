@@ -32,7 +32,7 @@ const Menu = () => {
     const handleNav = (option) => {
         switch(option) {
             case 'Mis Favoritos':
-                router.push('/home');
+                router.push('/my-favourites');
                 break;
             case 'Mis Shows':
                 router.push('/my-shows');
