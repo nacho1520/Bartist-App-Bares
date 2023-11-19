@@ -15,6 +15,9 @@ import blackStar from "../assets/icons/blackStar.png";
 import xCircle from "../assets/icons/x-circle.png";
 import outlineStar from "../assets/icons/outline-star.png";
 import outlineWhiteStar from "../assets/icons/outline-white-star.png";
+import fullHeart from "../assets/icons/full-heart.png";
+import whiteX from "../assets/icons/white-x-circle.png";
+import user from "../assets/icons/user.png";
 
 export default {
   home,
@@ -33,5 +36,8 @@ export default {
   blackStar,
   xCircle,
   outlineStar,
-  outlineWhiteStar
+  outlineWhiteStar,
+  fullHeart,
+  whiteX,
+  user
 };

@@ -1,44 +1,33 @@
-import { useState } from "react";
 import { Stack, useRouter } from "expo-router";
 import { SafeAreaView } from "react-native";
 
 import { COLORS, icons } from "../../constants";
 import { HeaderBtn } from "../../components";
-import ArtistProfileProfile from "./[id]";
-import useFetch from "../../hooks/useFetch";
+import Menu from "./index";
 
 const Layout = () => {
     const router = useRouter();
-    const [ like, setLike ] = useState(false);
-
-    const handleLike = () => {
-        setLike(like => !like);
-    };
-
     return(
         <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.backgroundColor }}>
             <Stack.Screen 
                 options={{
                     headerStyle: { backgroundColor: COLORS.backgroundColor },
                     headerShadowVisible: false,
-                    headerTitle: "",
-                    headerLeft: () => (
-                        <HeaderBtn 
-                            iconUrl={ icons.arrowLeft } 
-                            dimension="60%"
-                            handleBtnPress={ () => router.back() } 
-                        />
-                    ),
+                    headerTitle: "BARTIST",
+                    headerTitleStyle: {
+                        color: COLORS.whiteColor
+                    },
+                    headerTitleAlign: "center",
                     headerRight: () => (
                         <HeaderBtn 
-                            iconUrl={ like ? icons.fullHeart : icons.heart  }
+                            iconUrl={ icons.whiteX }
                             dimension="60%"
-                            handleBtnPress={ handleLike }
+                            handleBtnPress={ () => router.back() }
                         />
                     )
                 }}
             />
-            <ArtistProfileProfile />
+            <Menu />
         </SafeAreaView>
     );
 }
