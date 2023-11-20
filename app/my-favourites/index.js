@@ -6,8 +6,10 @@ import useFetch from "../../hooks/useFetch";
 import { icons, COLORS } from "../../constants";
 import { HeaderBtn, SearchBar, SearchCard } from "../../components";
 
+const pubId = '420f3a12-104c-4828-ad16-dbb19ce97218';
+
 const Favs = () => {
-    const { data, isLoading, error } = useFetch('/artists');
+    const { data, isLoading, error } = useFetch(`/pubs/${ pubId }/likes`);
     const router = useRouter();
 
     return(

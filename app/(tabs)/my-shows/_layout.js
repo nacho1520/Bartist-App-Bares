@@ -18,7 +18,9 @@ const Layout = () => {
                 options={{
                     headerStyle: { backgroundColor: COLORS.backgroundColor },
                     headerShadowVisible: false,
-                    headerTitle: "",
+                    headerTitle: "Mis Shows",
+                    headerTintColor:  COLORS.whiteColor,
+                    headerTitleAlign: "center",
                     headerLeft: () => (
                         <HeaderBtn 
                             iconUrl={ icons.menu } 

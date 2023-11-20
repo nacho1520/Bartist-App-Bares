@@ -18,19 +18,14 @@ const Layout = () => {
                 options={{
                     headerStyle: { backgroundColor: COLORS.backgroundColor },
                     headerShadowVisible: false,
-                    headerTitle: "",
+                    headerTitle: "Artistas Favoritos",
+                    headerTintColor:  COLORS.whiteColor,
+                    headerTitleAlign: "center",
                     headerLeft: () => (
                         <HeaderBtn 
-                            iconUrl={ icons.menu } 
+                            iconUrl={ icons.arrowLeft } 
                             dimension="60%"
-                            handleBtnPress={ () =>  router.push('/menu')  }
-                        />
-                    ),
-                    headerRight: () => (
-                        <HeaderBtn 
-                            iconUrl={ images.temple } 
-                            dimension="100%"
-                            handleBtnPress={ handleProfilePress }
+                            handleBtnPress={ () =>  router.back()  }
                         />
                     )
                 }}

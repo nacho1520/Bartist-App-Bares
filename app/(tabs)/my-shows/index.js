@@ -56,9 +56,8 @@ const MyShows = () => {
     const router = useRouter();
     return (
         <View style={{ flex: 1, padding: 16 }}>
-            <Text style={{ color: COLORS.whiteColor, fontSize: 26, textAlign: "center" }}>Mis Shows</Text>
             <ScrollView showsVerticalScrollIndicator={ false } style={{ marginBottom: 10, padding: 16 }}>
-                <View style={{ flex: 1, flexDirection: "column", gap: 20, marginVertical: 15 }}>
+                <View style={{ flex: 1, flexDirection: "column", gap: 20, marginBottom: 15 }}>
                     {
                         shows.map((show) => (
                             <ShowCard 
