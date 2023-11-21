@@ -8,7 +8,7 @@ const Welcome = () => {
         <View style={{ marginBottom: 10 }}>
             <View style={ styles.container } >
                 <Text style={ styles.userName }>Hola Temple,</Text>
-                <Text style={ styles.welcomeMessage }>Compartí tu grandiosa música</Text>
+                <Text style={ styles.welcomeMessage }>Descubrí grandes artistas</Text>
             </View>
         </View>
     );

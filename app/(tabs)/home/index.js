@@ -11,7 +11,6 @@ const Home = () => {
     return (
         <ScrollView showsVerticalScrollIndicator={ false }>
             <View style={{ flex: 1, padding: 16 }}>
-                <Welcome />
                 {
                     isLoading ? (
                         <ActivityIndicator size="large" color={ COLORS.violet } />
@@ -19,6 +18,7 @@ const Home = () => {
                         <Text>Algo anda mal...</Text>
                     ) : (
                         <>
+                            <Welcome />
                             <HorizontalList title={ "Próximos shows" } data={ data } />
                             <HorizontalList title={ "Artistas recomendados" } data={ data } />
                             <HorizontalList title={ "Rap" } data={ data } />
