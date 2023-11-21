@@ -9,6 +9,8 @@ import ProfileImage from "./common/profileImage/ProfileImage";
 import ShowCard from "./common/cards/showCard/ShowCard";
 import RatingCard from "./common/cards/ratingCard/RatingCard";
 import ConfirmModal from "./common/confirmModal/ConfirmModal";
+import Checkbox from "./common/checkbox/Checkbox";
+import CheckboxGroup from "./common/checkboxgroup/CheckboxGroup";
 
 // Home Components
 import HorizontalList from "./home/horizontalList/HorizontalList";
@@ -24,6 +26,10 @@ import RateModal from "./artist/rateModal/RateModal";
 
 // Show Components
 import CreationForm from "./shows/creationForm/CreationForm";
+import ShowInfo from "./shows/showInfo/ShowInfo";
+import { default as ShowTabs } from "./shows/tabs/Tabs";
+import { default as ShowAbout } from "./shows/about/About";
+import BulletPointsInfo from "./shows/bulletPointsInfo/BulletPointsInfo";
 
 // Forms Components
 import Select from "./forms/Select";
@@ -46,5 +52,11 @@ export {
     RatingCard,
     Select,
     RateModal,
-    ConfirmModal
+    ConfirmModal,
+    Checkbox,
+    CheckboxGroup,
+    ShowInfo,
+    ShowTabs,
+    ShowAbout,
+    BulletPointsInfo
 }

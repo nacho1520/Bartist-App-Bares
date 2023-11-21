@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, TextInput, Text } from "react-native";
 
 import styles from "./creationform.style";
-import  Select  from "../../forms/Select";
+import PrimaryBtn from "../../common/buttons/primarybtn/PrimaryBtn";
 
 const CreationForm = () => {
+   
+
     return(
         <View style={ styles.formContainer }>
             <View style={ styles.inputContainer }>
@@ -19,7 +21,6 @@ const CreationForm = () => {
                 <Text>generos</Text>
                 <TextInput />
             </View>
-            <Select />
             <View style={ styles.inputContainer }>
                 <Text>cantidad de bandas</Text>
                 <TextInput />
@@ -65,6 +66,11 @@ const CreationForm = () => {
             <View style={ styles.inputContainer }>
                 <Text>metodo de pago</Text>
                 <TextInput />
+            </View>
+            <View style={{ width: "100%", flexDirection: "row", "justifyContent": "center" }}>
+                <View style={{ width: "50%" }}>
+                    <PrimaryBtn btnLabel="Crear" handlePress={ () => {} } />
+                </View>
             </View>
         </View>
     );
