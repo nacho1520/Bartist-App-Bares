@@ -35,11 +35,6 @@ const ProfileInfo = ({imageUrl, name, type, bio, instagram, twitter, isUser }) =
                 <View style={{ marginTop: 15, flexDirection: "column", gap: 15 }}>
                     <SocialBtn iconUrl={ icons.instagram } socialMedia="Instagram" />
                     <SocialBtn iconUrl={ icons.twitter } socialMedia="Twitter" />
-                    {
-                        isUser ? (
-                            <SocialBtn iconUrl={icons.marker} socialMedia="Markers" handleNavigation={handleMarkersPress} />
-                        ) : ( <></> )
-                    }
                 </View>
                 {
                     isUser ? (

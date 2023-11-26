@@ -20,7 +20,7 @@ const MyShows = () => {
                 ) : (
                     <>
                         <ScrollView showsVerticalScrollIndicator={ false } style={{ marginBottom: 10, padding: 16 }}>
-                            <View style={{ flex: 1, flexDirection: "column", gap: 20, marginBottom: 15 }}>
+                            <View style={{ flex: 1, flexDirection: "column", gap: 30, paddingVertical: 10 }}>
                                 {
                                     data.map((item) => (
                                         <ShowCard 

@@ -17,8 +17,8 @@ const SearchCard = ({ name, genres, image, handlePress, rating }) => {
             </View>
             <View style={ styles.infoContainer }>
                 <Text style={ styles.title }>{ name }</Text>
-                <Text style={ styles.info }>{ genres }</Text>
-                {
+                <Text style={ styles.info }>{ genres.split(',').join(', ') }</Text>
+                {/* {
                     rating > 0 ? (
                         <Rating 
                             rate={ rating }
@@ -29,7 +29,7 @@ const SearchCard = ({ name, genres, image, handlePress, rating }) => {
                     ) : (
                         <></>
                     )
-                }
+                } */}
             </View>
         </TouchableOpacity>
     );

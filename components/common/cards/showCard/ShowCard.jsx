@@ -15,9 +15,11 @@ const ShowCard = ({ name, image, date, time, genres, handlePress }) => {
             </View>
             <View style={ styles.infoContainer }>
                 <Text style={ styles.title }>{ name }</Text>
-                <Text style={ styles.info }>{ genres }</Text>
-                <Text style={ styles.info }>{ date }</Text>
-                <Text style={ styles.info }>{ time }</Text>
+                <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+                    <Text style={ styles.info }>{ date }</Text>
+                    <Text style={ styles.info }> / </Text>
+                    <Text style={ styles.info }>{ time }</Text>
+                </View>
             </View>
         </TouchableOpacity>
     );

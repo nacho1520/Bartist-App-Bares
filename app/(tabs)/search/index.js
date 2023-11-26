@@ -31,9 +31,9 @@ const Search = () => {
                     </View>
                     <ScrollView 
                         showsVerticalScrollIndicator={ false }
-                        contentContainerStyle={{ justifyContent: "center", padding: 16 }}
+                        contentContainerStyle={{ justifyContent: "center"}}
                     >
-                        <View style={{ flex: 1, flexDirection: "column", gap: 20 }}>
+                        <View style={{ flex: 1, flexDirection: "column", gap: 30, paddingVertical: 10 }}>
                             {
                                 data.map((item) => (
                                     <SearchCard 
