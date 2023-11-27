@@ -1,5 +1,5 @@
-import React from "react";
-import { ScrollView, View, ActivityIndicator } from "react-native";
+import React, { useState } from "react";
+import { ScrollView, View, ActivityIndicator, StyleSheet, TouchableOpacity, Image, Text } from "react-native";
 import { useRouter } from "expo-router";
 
 import useFetch from "../../../hooks/useFetch";
@@ -9,6 +9,15 @@ import { HeaderBtn, SearchBar, SearchCard } from "../../../components";
 const Search = () => {
     const { data, isLoading, error } = useFetch('/artists');
     const router = useRouter();
+    const [ page, setPage ] = useState(1);
+
+    const handlePagination = (direction) => {
+        if (direction === 'left' && page > 1) {
+            setPage(page - 1)
+        } else if (direction === 'right') {
+            setPage(page + 1)
+        }
+    }
 
     return(
         <View style={{ flex: 1, padding: 16 }}>
@@ -48,11 +57,71 @@ const Search = () => {
                             }
                         </View>
                     </ScrollView>
+                    <View style={styles.footerContainer}>
+                        <TouchableOpacity
+                            style={styles.paginationButton}
+                            onPress={() => handlePagination('left')}
+                        >
+                            <Image
+                                source={icons.chevronLeft}
+                                style={styles.paginationImage}
+                                resizeMode="contain"
+                            />
+                        </TouchableOpacity>
+                        <View style={styles.paginationTextBox}>
+                            <Text style={styles.paginationText}>{page}</Text>
+                        </View>
+                        <TouchableOpacity
+                            style={styles.paginationButton}
+                            onPress={() => handlePagination('right')}
+                        >
+                            <Image
+                                source={icons.chevronRight}
+                                style={styles.paginationImage}
+                                resizeMode="contain"
+                            />
+                        </TouchableOpacity>
+                    </View>
                 </>
             )
         }
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+    footerContainer: {
+        marginTop: 12,
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'row',
+        gap: 10
+    },
+    paginationButton: {
+        width: 30,
+        height: 30,
+        borderRadius: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: COLORS.violet
+    },
+    paginationImage: {
+        width: '60%',
+        height: '60%',
+        tintColor: COLORS.whiteColor
+    },
+    paginationTextBox: {
+        width: 30,
+        height: 30,
+        borderRadius: 2,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: COLORS.whiteColor
+    },
+    paginationText: {
+        fontSize: 16,
+        color: COLORS.backgroundColor
+    }
+});
 
 export default Search;

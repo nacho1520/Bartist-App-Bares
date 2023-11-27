@@ -18,6 +18,8 @@ import outlineWhiteStar from "../assets/icons/outline-white-star.png";
 import fullHeart from "../assets/icons/full-heart.png";
 import whiteX from "../assets/icons/white-x-circle.png";
 import user from "../assets/icons/user.png";
+import chevronLeft from "../assets/icons/chevron-left.png";
+import chevronRight from "../assets/icons/chevron-right.png";
 
 export default {
   home,
@@ -39,5 +41,7 @@ export default {
   outlineWhiteStar,
   fullHeart,
   whiteX,
-  user
+  user,
+  chevronLeft,
+  chevronRight
 };
