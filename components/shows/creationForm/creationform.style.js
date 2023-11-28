@@ -9,10 +9,12 @@ const styles = StyleSheet.create({
         gap: 25
     },
     inputContainer: {
-        width: "90%",
-        backgroundColor: COLORS.whiteColor,
-        borderRadius: 6,
-        padding: 10
+        width: "100%",
+        borderBottomWidth: 2,
+        borderBottomColor: COLORS.whiteColor
+    },
+    inputLabel: {
+        color: COLORS.darkerWhite
     },
     dateContainer: {
         width: "90%",

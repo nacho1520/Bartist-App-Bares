@@ -10,19 +10,19 @@ const CreationForm = () => {
     return(
         <View style={ styles.formContainer }>
             <View style={ styles.inputContainer }>
-                <Text>nombre</Text>
+                <Text style={ styles.inputLabel }>Nombre</Text>
+                <TextInput/>
+            </View>
+            <View style={ styles.inputContainer }>
+                <Text style={ styles.inputLabel }>Descripción</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>descripción</Text>
+                <Text style={ styles.inputLabel }>Generos</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>generos</Text>
-                <TextInput />
-            </View>
-            <View style={ styles.inputContainer }>
-                <Text>cantidad de bandas</Text>
+                <Text style={ styles.inputLabel }>Cantidad de bandas</Text>
                 <TextInput />
             </View>
             <View style={ styles.dateContainer }>
@@ -36,35 +36,35 @@ const CreationForm = () => {
                 </View>
             </View>
             <View style={ styles.inputContainer }>
-                <Text>instrumentos disponibles</Text>
+                <Text style={ styles.inputLabel }>Instrumentos disponibles</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>hay escenario</Text>
+                <Text style={ styles.inputLabel }>Hay escenario</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>publico</Text>
+                <Text style={ styles.inputLabel }>Publico</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>charter</Text>
+                <Text style={ styles.inputLabel }>Charter</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>porcentaje de ventas</Text>
+                <Text style={ styles.inputLabel }>Porcentaje de ventas</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>costos adicionales</Text>
+                <Text style={ styles.inputLabel }>Costos adicionales</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>alimentación de la banda</Text>
+                <Text style={ styles.inputLabel }>Alimentación de la banda</Text>
                 <TextInput />
             </View>
             <View style={ styles.inputContainer }>
-                <Text>metodo de pago</Text>
+                <Text style={ styles.inputLabel }>Metodo de pago</Text>
                 <TextInput />
             </View>
             <View style={{ width: "100%", flexDirection: "row", "justifyContent": "center" }}>
