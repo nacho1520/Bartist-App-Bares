@@ -79,7 +79,7 @@ const ArtistRating = () => {
                                 ratingData.map((item) => (
                                     <RatingCard 
                                         title={ item.title }
-                                        description={ item.description }
+                                        comment={ item.description }
                                         rating={ item.rating }
                                         key={ item._id }
                                     />

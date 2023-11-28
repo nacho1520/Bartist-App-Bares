@@ -5,17 +5,19 @@ import styles from "./ratingcard.style";
 import { icons } from "../../../../constants";
 import Rating from "../../rating/Rating";
 
-const RatingCard = ({ title, description, rating }) => {
+const RatingCard = ({ title, comment, rating }) => {
     return(
         <View style={ styles.card }>
-            <Text style={ styles.title }>{ title }</Text>
-            <Text>{ description }</Text>
-            <Rating
-                rate={ rating }
-                rateIcon={ icons.blackStar }
-                unRateIcon={ icons.outlineStar }
-                textLabel={ false } 
-            /> 
+            <View style={ styles.headerContainer }>
+                <Text style={ styles.title }>{ title }</Text>
+                <Rating
+                    rate={ rating }
+                    rateIcon={ icons.star }
+                    unRateIcon={ icons.outlineWhiteStar }
+                    textLabel={ false } 
+                /> 
+            </View>
+            <Text style={ styles.description }>{ comment }</Text>     
         </View>
     );
 };

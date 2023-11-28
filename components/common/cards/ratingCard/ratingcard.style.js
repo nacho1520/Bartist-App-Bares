@@ -4,18 +4,27 @@ import { COLORS } from "../../../../constants";
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: COLORS.whiteColor,
-        borderRadius: 12,
         padding: 16,
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "flex-start",
-        height: 150,
-        gap: 10
+        height: 70,
+        gap: 5
+    },
+    headerContainer: {
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "flex-end"
     },
     title: {
-        fontSize: 20,
-        fontWeight: "bold"
+        fontSize: 16,
+        marginRight: 10,
+        fontWeight: "bold",
+        color: COLORS.whiteColor
+    },
+    description: {
+        fontSize: 12,
+        color: COLORS.whiteColor
     }
 });
 
