@@ -1,6 +1,6 @@
 import { View, ScrollView, ActivityIndicator, Text } from "react-native";
 
-import { HorizontalList, Welcome } from "../../../components";
+import { Welcome, ExploreArtists, RecommendedArtists, TopArtists } from "../../../components";
 import { COLORS } from "../../../constants";
 import useFetch from "../../../hooks/useFetch";
 
@@ -19,9 +19,9 @@ const Home = () => {
                     ) : (
                         <>
                             <Welcome />
-                            <HorizontalList title={ "Próximos shows" } data={ data } />
-                            <HorizontalList title={ "Artistas recomendados" } data={ data } />
-                            <HorizontalList title={ "Rap" } data={ data } />
+                            <ExploreArtists />
+                            <TopArtists />
+                            <RecommendedArtists />
                         </>
                     )
                 }

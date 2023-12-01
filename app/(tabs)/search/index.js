@@ -47,7 +47,7 @@ const Search = () => {
                                 data.map((item) => (
                                     <SearchCard 
                                         name={ item.name }
-                                        genres={ item.genres }
+                                        genres={ item.genres[0] }
                                         image={  item.profileImage }
                                         handlePress={ () => { router.push(`/artist-profile/${ item._id }`) } }
                                         rating={ item.rating }

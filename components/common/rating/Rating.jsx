@@ -3,7 +3,7 @@ import { View, Image, TouchableOpacity, Text } from "react-native";
 
 import styles from "./rating.style";
 
-const Rating = ({ rate, handlePress, rateIcon, unRateIcon, textLabel }) => {
+const showRating = (rate, handlePress, rateIcon, unRateIcon, textLabel) => {
     const maxRating = [1,2,3,4,5];
     return(
         <TouchableOpacity style={ styles.ratingContainer } onPress={ handlePress }>
@@ -31,6 +31,22 @@ const Rating = ({ rate, handlePress, rateIcon, unRateIcon, textLabel }) => {
                 )
             }
         </TouchableOpacity>
+    );
+};
+
+
+const showNoRatingMsg = (handlePress) => {
+    return(
+        <TouchableOpacity style={ styles.ratingContainer } onPress={ handlePress }>
+            <Text style={ styles.rateLabel }>Ver Comentarios</Text>
+        </TouchableOpacity>
+    );
+}
+
+const Rating = ({ rate, handlePress, rateIcon, unRateIcon, textLabel }) => {
+    return(
+        rate != 0 ? showRating(rate, handlePress, rateIcon, unRateIcon, textLabel) 
+        : showNoRatingMsg(handlePress)
     );
 };
 

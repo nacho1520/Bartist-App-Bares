@@ -60,13 +60,17 @@ const ArtistRating = () => {
                         <ProfileImage profileImg={ data.profileImage } />  
                         <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
                             <Text style={{ color: COLORS.whiteColor, fontSize: 36, fontWeight: "bold" }}>{ data.name }</Text>
-                            <Rating 
-                                rate={ data.rating }
-                                rateIcon={ icons.star }
-                                unRateIcon={ icons.outlineWhiteStar }
-                                textLabel={ false }
-                                handlePress={() => {}} 
-                            />
+                            {
+                                data.rating > 0 ? 
+                                <Rating 
+                                    rate={ data.rating }
+                                    rateIcon={ icons.star }
+                                    unRateIcon={ icons.outlineWhiteStar }
+                                    textLabel={ false }
+                                    handlePress={() => {}} 
+                                /> : <></>
+                            }
+                            
                         </View>
                         <View style={{ width: "100%", justifyContent: "center", flexDirection: "row", marginVertical: 10 }}>
                             <View style={{ width: "50%" }}>
@@ -76,6 +80,7 @@ const ArtistRating = () => {
                             </View>
                         </View>
                             {
+                                ratingData.length > 0 ? 
                                 ratingData.map((item) => (
                                     <RatingCard 
                                         title={ item.title }
@@ -83,7 +88,12 @@ const ArtistRating = () => {
                                         rating={ item.rating }
                                         key={ item._id }
                                     />
-                                ))
+                                )) : 
+                                (
+                                    <View style={{ width: "100%", padding: 10 }}>
+                                        <Text style={{ color: COLORS.whiteColor, fontSize: 18, textAlign: "center" }}>Se el primero en calificar al artista</Text>
+                                    </View>
+                                )
                             }
                         <RateModal 
                             rating={ rate }

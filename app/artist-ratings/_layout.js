@@ -3,7 +3,7 @@ import { SafeAreaView } from "react-native";
 
 import { COLORS, icons } from "../../constants";
 import { HeaderBtn } from "../../components";
-import ArtistProfileProfile from "./[id]";
+import ArtistRating from "./[id]";
 
 const Layout = () => {
     const router = useRouter();
@@ -23,7 +23,7 @@ const Layout = () => {
                     )
                 }}
             />
-            <ArtistProfileProfile />
+            <ArtistRating />
         </SafeAreaView>
     );
 }

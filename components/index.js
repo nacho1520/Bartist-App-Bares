@@ -15,6 +15,9 @@ import CheckboxGroup from "./common/checkboxgroup/CheckboxGroup";
 // Home Components
 import HorizontalList from "./home/horizontalList/HorizontalList";
 import Welcome from "./home/welcome/Welcome";
+import ExploreArtists from "./home/exploreArtists/ExploreArtists";
+import RecommendedArtists from "./home/recommendedArtists/RecommendedArtists";
+import TopArtists from "./home/topArtists/TopArtists";
 
 // Profile Components
 import ProfileInfo from "./profile/profileInfo/ProfileInfo";
@@ -35,6 +38,9 @@ import BulletPointsInfo from "./shows/bulletPointsInfo/BulletPointsInfo";
 import Select from "./forms/Select";
 
 export {
+    ExploreArtists,
+    RecommendedArtists,
+    TopArtists,
     ArtistCard,
     HeaderBtn,
     HorizontalList,
