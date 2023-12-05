@@ -47,7 +47,7 @@ const Search = () => {
                                 data.map((item) => (
                                     <SearchCard 
                                         name={ item.name }
-                                        genres={ item.genres[0] }
+                                        genres={ item.genres }
                                         image={  item.profileImage }
                                         handlePress={ () => { router.push(`/artist-profile/${ item._id }`) } }
                                         rating={ item.rating }
@@ -57,7 +57,7 @@ const Search = () => {
                             }
                         </View>
                     </ScrollView>
-                    <View style={styles.footerContainer}>
+                    {/* <View style={styles.footerContainer}>
                         <TouchableOpacity
                             style={styles.paginationButton}
                             onPress={() => handlePagination('left')}
@@ -81,7 +81,7 @@ const Search = () => {
                                 resizeMode="contain"
                             />
                         </TouchableOpacity>
-                    </View>
+                    </View> */}
                 </>
             )
         }

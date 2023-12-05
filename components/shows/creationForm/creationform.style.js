@@ -17,15 +17,15 @@ const styles = StyleSheet.create({
         color: COLORS.darkerWhite
     },
     dateContainer: {
-        width: "90%",
+        width: "100%",
         flexDirection: "row",
         justifyContent: "space-between"
     },
     dateInfo: {
         width: "45%",
-        backgroundColor: COLORS.whiteColor,
-        borderRadius: 6,
-        padding: 10
+        padding: 10,
+        borderBottomWidth: 2,
+        borderBottomColor: COLORS.whiteColor
     }
 });
 

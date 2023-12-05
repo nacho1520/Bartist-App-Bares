@@ -27,11 +27,11 @@ const CreationForm = () => {
             </View>
             <View style={ styles.dateContainer }>
                 <View style={ styles.dateInfo }>
-                    <Text>fecha</Text>
+                    <Text style={ styles.inputLabel }>fecha</Text>
                     <TextInput />
                 </View>
                 <View style={ styles.dateInfo }>
-                    <Text>hora</Text>
+                    <Text style={ styles.inputLabel }>hora</Text>
                     <TextInput />
                 </View>
             </View>

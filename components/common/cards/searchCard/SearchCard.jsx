@@ -1,9 +1,7 @@
 import React from "react";
 import { TouchableOpacity, Text, Image, View } from "react-native";
 
-import { icons } from "../../../../constants";
 import styles from "./searchcard.style";
-import Rating from "../../rating/Rating";
 
 const SearchCard = ({ name, genres, image, handlePress, rating }) => {
     return(
@@ -17,19 +15,7 @@ const SearchCard = ({ name, genres, image, handlePress, rating }) => {
             </View>
             <View style={ styles.infoContainer }>
                 <Text style={ styles.title }>{ name }</Text>
-                <Text style={ styles.info }>{ genres.split(',').join(', ') }</Text>
-                {/* {
-                    rating > 0 ? (
-                        <Rating 
-                            rate={ rating }
-                            rateIcon={ icons.blackStar }
-                            unRateIcon={ icons.outlineStar }
-                            textLabel={ false }
-                        />
-                    ) : (
-                        <></>
-                    )
-                } */}
+                <Text style={ styles.info }>{ genres[0] }</Text>
             </View>
         </TouchableOpacity>
     );
